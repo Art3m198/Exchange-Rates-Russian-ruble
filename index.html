@@ -12,7 +12,7 @@ $(document).ready(function () {
     $.ajax({
         type: "GET",
         url: "http://www.cbr.ru/scripts/XML_daily.asp?callback=?",
-        dataType: "jsonp",
+        dataType: "xml jsonp",
         success: xmlParser
     });
 });
