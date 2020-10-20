@@ -1,80 +1,54 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title></title>
-<link href="../style.css" rel="stylesheet" type="text/css" />
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-    
-$(document).ready(function () {
-    $.ajax({
-        type: "GET",
-        url: "http://www.cbr.ru/scripts/XML_daily.asp?callback=?",
-        dataType: "jsonp",
-        success: xmlParser
-    });
-});
-
-
-
-
-function xmlParser(xml) {
-
-    $('#load').fadeOut();
-
-    $(xml).find('Valute[ID="R01100"]').each(function () {
-
-        $(".main").append('<div class="book"><div class="title">' + $(this).find("CharCode").text() + '</div><div class="description">' + $(this).find("Name").text() + '</div><div class="date">Published ' + $(this).find("Value").text() + '</div></div>');
-        $(".book").fadeIn(1000);
-
-    });
-
-
-
-}
-</script>
-
-<style> 
-.main{
-width:1000px;
-margin:0 auto;
-height:130px;
-}
- 
-.book{
-width:208px;
-float:left;
-margin:10px;
-border:1px #dedede solid;
-padding:5px;
-display:none;
-}
-
-.title{
-margin-bottom:6px;}
- 
-.description{font-size:11px; font-family:Geneva, Arial, Helvetica, sans-serif;}
-
-.date{font-size:10px; color:#999; margin-top:4px;}
-
-.loader{
-height:11px;
-}
-
-</style> 
-
-
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="http://faviconka.ru/ico/faviconka_ru_1009.png" type="image/x-icon">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="css/style.css" rel="stylesheet" id="style-css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+<title>Курсы валют / Exchange rates</title>
 </head>
 <body>
-
-<div class="main">
-<div align="center" class="loader"><img src="loader.gif" id="load" width="16" height="11" align="absmiddle"/></div>
+<div class="container mainw">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="heading">				
+				<img src="images/logo.png" />
+                Курс рубля/ Russian ruble exchange rate
+			</div>
+		</div>	
+	</div>
+	<div class="list">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
+                        <div class="header">
+                                <label for="select">Курс / Rate</label>
+                                <select id="select" class="input">
+                                <option value='Valute[ID="R01239"]'>EUR</option>
+                                <option value='Valute[ID="R01235"]'>USD</option>
+                                <option value='Valute[ID="R01350"]'>CAD</option>
+                                <option value='Valute[ID="R01010"]'>AUD</option>
+                                <option value='Valute[ID="R01035"]'>GBP</option>
+                                <option value='Valute[ID="R01760"]'>CZK</option>
+                                <option value='Valute[ID="R01820"]'>JPY</option>
+                                <option value='Valute[ID="R01775"]'>CHF</option>
+                                <option value='Valute[ID="R01770"]'>SEK</option>
+                                </select>
+                                <button id="js-button" class="btn">Показать / Show</button>
+                        </div>
+                        <div class="main" id="main">
+                        </div>
+					</div>
+                </div>	
+            </div>
+		</div>	
+    </div>
 </div>
-
-<div class="clear"></div>
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

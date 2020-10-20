@@ -1,0 +1,106 @@
+* {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+}
+.main{
+    margin: 25px;
+    width:auto;
+    height:60px;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.mainw{
+    margin-top: 80px;
+	text-align:center;
+     }     
+.page{
+    width:208px;
+    float:left;
+    border:1px #dedede solid;
+    padding:5px;
+    display:none;
+    }
+    
+.title{
+    margin-bottom:6px;}
+     
+.description{font-size:11px; font-family:Geneva, Arial, Helvetica, sans-serif;}
+    
+.kurs{font-size:11px; font-family:Geneva, Arial, Helvetica, sans-serif; margin-top:4px;} 
+
+.heading{
+		background: #fff;
+		padding: 1%;
+		text-align: left;
+        box-shadow: 0px 0px 4px 0px #545b62;
+    }
+.heading img{
+		width: 10%;
+	}
+.list{
+		padding: 0;
+		background:#fff;
+		box-shadow: 0px 0px 4px 0px #b0b3b7;
+	}
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color:  transparent;
+    color: rgb(226, 36, 36);
+  }
+  
+  /* Style the header */
+  .header {
+    background: #f7673c;
+    padding: 30px 40px;
+    color: white;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the input */
+  input {
+    margin: auto;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  label {
+    display:block;
+    text-align:right;
+    margin: 5px;
+  }
+  /* Style the "Add" button */
+  .btn {
+    background:#ff0844;
+    color: rgb(255, 255, 255);
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    margin-left:5px;
+  }
+  .btn:hover {
+    background-color: rgb(77, 226, 114);
+  }
