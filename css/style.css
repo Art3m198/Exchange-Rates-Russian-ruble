@@ -12,16 +12,16 @@
     align-items: center;
     }
 .mainw{
-    margin-top: 80px;
+  margin-top: 80px;
 	text-align:center;
-     }     
+}     
 .page{
-    width:208px;
-    float:left;
-    border:1px #dedede solid;
-    padding:5px;
-    display:none;
-    }
+  width:208px;
+  float:left;
+  border:1px #dedede solid;
+  padding:5px;
+  display:none;
+}
     
 .title{
     margin-bottom:6px;}
